@@ -86,15 +86,15 @@ goto menu
 :resume_setup
 cls
 for %%D in (C D E F G H I J K L M N O P Q R S T U V W Z) do (
-    if exist "%%D:\FelixWindowSetup\session.json" (
-        echo Resuming %%D:\FelixWindowSetup\session.json...
-        if exist "%%D:\FelixWindowSetup\app\WindowSetup.exe" (
-            start "" /wait "%%D:\FelixWindowSetup\app\WindowSetup.exe" --resume "%%D:\FelixWindowSetup\session.json"
+    if exist "%%D:\FelixWinDeploy\session.json" (
+        echo Resuming %%D:\FelixWinDeploy\session.json...
+        if exist "%%D:\FelixWinDeploy\app\FelixWinDeploy.exe" (
+            start "" /wait "%%D:\FelixWinDeploy\app\FelixWinDeploy.exe" --resume "%%D:\FelixWinDeploy\session.json"
             goto menu
         )
     )
 )
-echo No pending FelixWindowSetup session found.
+echo No pending FelixWinDeploy session found.
 pause
 goto menu
 
@@ -122,12 +122,12 @@ goto menu
 
 :launch_setup
 for %%U in (C D E F G H I J K L M N O P Q R S T U V W X Y Z) do (
-    if exist "%%U:\FelixBootRescue\app\WindowSetup.exe" (
-        start "" "%%U:\FelixBootRescue\app\WindowSetup.exe"
+    if exist "%%U:\FelixBootRescue\app\FelixWinDeploy.exe" (
+        start "" "%%U:\FelixBootRescue\app\FelixWinDeploy.exe"
         goto menu
     )
 )
-if exist "Y:\Apps\WindowSetup\WindowSetup.exe" start "" "Y:\Apps\WindowSetup\WindowSetup.exe"
+if exist "Y:\Apps\WinDeploy\FelixWinDeploy.exe" start "" "Y:\Apps\WinDeploy\FelixWinDeploy.exe"
 goto menu
 
 :open_cmd

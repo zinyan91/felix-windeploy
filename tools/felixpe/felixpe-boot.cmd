@@ -60,22 +60,22 @@ if exist Y:\Apps\apps.json (echo [FelixPE] Ung dung: Y:\Apps) else (echo [FelixP
 rem Tu dong tiep tuc phien cai Windows hoac sao luu duoc chuan bi tu Desktop (Felix WinDeploy).
 if not defined FELIX_WS_LAUNCHED (
     for %%d in (C D E F G H I J K L M N O P Q R S T U V W Z) do (
-        if not defined FELIX_WS_LAUNCHED if exist "%%d:\FelixWindowSetup\backup-session.json" (
-            if exist "%%d:\FelixWindowSetup\app\WindowSetup.exe" (
+        if not defined FELIX_WS_LAUNCHED if exist "%%d:\FelixWinDeploy\backup-session.json" (
+            if exist "%%d:\FelixWinDeploy\app\FelixWinDeploy.exe" (
                 set "FELIX_WS_LAUNCHED=1"
-                start "" "%%d:\FelixWindowSetup\app\WindowSetup.exe" --resume-backup "%%d:\FelixWindowSetup\backup-session.json"
-            ) else if exist "Y:\Apps\WindowSetup\WindowSetup.exe" (
+                start "" "%%d:\FelixWinDeploy\app\FelixWinDeploy.exe" --resume-backup "%%d:\FelixWinDeploy\backup-session.json"
+            ) else if exist "Y:\Apps\WinDeploy\FelixWinDeploy.exe" (
                 set "FELIX_WS_LAUNCHED=1"
-                start "" "Y:\Apps\WindowSetup\WindowSetup.exe" --resume-backup "%%d:\FelixWindowSetup\backup-session.json"
+                start "" "Y:\Apps\WinDeploy\FelixWinDeploy.exe" --resume-backup "%%d:\FelixWinDeploy\backup-session.json"
             )
         )
-        if not defined FELIX_WS_LAUNCHED if exist "%%d:\FelixWindowSetup\session.json" (
-            if exist "%%d:\FelixWindowSetup\app\WindowSetup.exe" (
+        if not defined FELIX_WS_LAUNCHED if exist "%%d:\FelixWinDeploy\session.json" (
+            if exist "%%d:\FelixWinDeploy\app\FelixWinDeploy.exe" (
                 set "FELIX_WS_LAUNCHED=1"
-                start "" "%%d:\FelixWindowSetup\app\WindowSetup.exe" --resume "%%d:\FelixWindowSetup\session.json"
-            ) else if exist "Y:\Apps\WindowSetup\WindowSetup.exe" (
+                start "" "%%d:\FelixWinDeploy\app\FelixWinDeploy.exe" --resume "%%d:\FelixWinDeploy\session.json"
+            ) else if exist "Y:\Apps\WinDeploy\FelixWinDeploy.exe" (
                 set "FELIX_WS_LAUNCHED=1"
-                start "" "Y:\Apps\WindowSetup\WindowSetup.exe" --resume "%%d:\FelixWindowSetup\session.json"
+                start "" "Y:\Apps\WinDeploy\FelixWinDeploy.exe" --resume "%%d:\FelixWinDeploy\session.json"
             )
         )
     )

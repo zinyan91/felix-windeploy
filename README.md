@@ -12,25 +12,25 @@ Felix WinDeploy là ứng dụng WPF (.NET 10, `win-x64`) dùng để cài đặ
 
 ## Cấu trúc thư mục
 
-- `src/WindowSetup.Core`: mô hình dữ liệu, kiểm tra điều kiện trước khi cài (`WindowSetupPreflight`), sinh `Unattend.xml`, đánh giá phần cứng (`HardwareAdvisor`) và bộ đọc thông tin ảnh.
-- `src/WindowSetup.Storage`: đọc bảng phân vùng, gọi DiskPart, gắn ổ ảo và ghi mục khởi động qua Win32/IOCTL.
-- `src/WindowSetup`: giao diện WPF, ViewModel và các dịch vụ hệ thống.
+- `src/WinDeploy.Core`: mô hình dữ liệu, kiểm tra điều kiện trước khi cài (`WindowSetupPreflight`), sinh `Unattend.xml`, đánh giá phần cứng (`HardwareAdvisor`) và bộ đọc thông tin ảnh.
+- `src/WinDeploy.Storage`: đọc bảng phân vùng, gọi DiskPart, gắn ổ ảo và ghi mục khởi động qua Win32/IOCTL.
+- `src/WinDeploy`: giao diện WPF, ViewModel và các dịch vụ hệ thống (build ra `FelixWinDeploy.exe`).
 - `tools/wimlib/x64`: `wimlib-imagex.exe` (1.14.5) và `libwim-15.dll` đi kèm ứng dụng.
 - `tools/felixpe`: kịch bản khởi động tiếp nối phiên cài/sao lưu và menu cứu hộ trong WinPE.
-- `tests/WindowSetup.Core.Tests`: unit test cho tầng nghiệp vụ thuần.
-- `tests/WindowSetup.UiTests`: kiểm thử ViewModel, `LayoutProbe` (`1160x820`), `PackUriAudit` và kiểm thử `wimlib-imagex` thực tế.
-- `tests/WindowSetup.IntegrationTests` và `tests/vm`: kiểm thử bố cục trên VHDX và khung chạy thử Hyper-V.
+- `tests/WinDeploy.Core.Tests`: unit test cho tầng nghiệp vụ thuần.
+- `tests/WinDeploy.UiTests`: kiểm thử ViewModel, `LayoutProbe` (`1160x820`), `PackUriAudit` và kiểm thử `wimlib-imagex` thực tế.
+- `tests/WinDeploy.IntegrationTests` và `tests/vm`: kiểm thử bố cục trên VHDX và khung chạy thử Hyper-V.
 
 ## Build và kiểm thử
 
 ```powershell
-dotnet build Felix.WindowSetup.slnx
-dotnet run --project tests\WindowSetup.Core.Tests\WindowSetup.Core.Tests.csproj
-dotnet run --project tests\WindowSetup.UiTests\WindowSetup.UiTests.csproj
-powershell -ExecutionPolicy Bypass -File scripts\Publish-WindowSetup.ps1
+dotnet build Felix.WinDeploy.slnx
+dotnet run --project tests\WinDeploy.Core.Tests\WinDeploy.Core.Tests.csproj
+dotnet run --project tests\WinDeploy.UiTests\WinDeploy.UiTests.csproj
+powershell -ExecutionPolicy Bypass -File scripts\Publish-WinDeploy.ps1
 ```
 
 ## Phạm vi chưa tự động hoá
 
-- Bài kiểm thử `WindowSetup.IntegrationTests` tạo VHDX thật cần chạy dưới quyền Administrator kèm đường dẫn tệp ISO Windows.
+- Bài kiểm thử `WinDeploy.IntegrationTests` tạo VHDX thật cần chạy dưới quyền Administrator kèm đường dẫn tệp ISO Windows.
 - Quá trình khởi động thực tế sau cài đặt trên máy ảo Hyper-V (`UEFI / GPT`, `BIOS / MBR` và `WinRE`) cần nghiệm thu thủ công.

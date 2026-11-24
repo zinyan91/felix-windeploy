@@ -1,8 +1,0 @@
-<Solution>
-  <Project Path="src/WindowSetup.Core/WindowSetup.Core.csproj" />
-  <Project Path="src/WindowSetup.Storage/WindowSetup.Storage.csproj" />
-  <Project Path="src/WindowSetup/WindowSetup.csproj" />
-  <Project Path="tests/WindowSetup.Core.Tests/WindowSetup.Core.Tests.csproj" />
-  <Project Path="tests/WindowSetup.IntegrationTests/WindowSetup.IntegrationTests.csproj" />
-  <Project Path="tests/WindowSetup.UiTests/WindowSetup.UiTests.csproj" />
-</Solution>
