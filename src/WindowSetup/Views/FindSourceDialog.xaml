@@ -1,0 +1,163 @@
+<fw:FeatureWindow x:Class="Felix.WindowSetup.Views.FindSourceDialog"
+                  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                  xmlns:fw="clr-namespace:Felix.UI.Controls;assembly=Felix.UI"
+                  xmlns:helpers="clr-namespace:Felix.WindowSetup.Helpers"
+                  Title="{DynamicResource WS_FindSource_Title}"
+                  Width="860"
+                  Height="520"
+                  MinWidth="680"
+                  MinHeight="420"
+                  FontSize="13.5"
+                  WindowStartupLocation="CenterOwner"
+                  ShowInTaskbar="False">
+    <Window.Resources>
+        <helpers:BoolToVisibilityConverter x:Key="BoolToVis"/>
+        <helpers:BytesToTextConverter x:Key="BytesText"/>
+        <helpers:StringNotEmptyToVisibilityConverter x:Key="StrVis"/>
+    </Window.Resources>
+    <DockPanel Margin="16">
+        <DockPanel DockPanel.Dock="Bottom" Margin="0,12,0,0">
+            <StackPanel DockPanel.Dock="Right" Orientation="Horizontal">
+                <Button x:Name="RescanButton" Content="{DynamicResource WS_Refresh}" Style="{StaticResource Redesign.Button}"
+                        MinHeight="34" Padding="14,6" Margin="0,0,8,0"
+                        Click="Rescan_Click"/>
+                <Button Content="{DynamicResource WS_Cancel}" Style="{StaticResource Redesign.Button}"
+                        MinHeight="34" Padding="14,6" Margin="0,0,8,0"
+                        Visibility="{Binding IsScanning, Converter={StaticResource BoolToVis}}"
+                        Click="Cancel_Click"/>
+                <Button Content="{DynamicResource WS_Close}" Style="{StaticResource Redesign.Button}"
+                        MinHeight="34" Padding="14,6" Margin="0,0,8,0"
+                        Click="Close_Click"/>
+                <Button x:Name="UseButton" Content="{DynamicResource WS_Use}" Style="{StaticResource Redesign.PrimaryButton}"
+                        MinHeight="34" Padding="18,6"
+                        IsEnabled="{Binding CanUse}"
+                        Click="Use_Click"/>
+            </StackPanel>
+            <ProgressBar Style="{StaticResource Redesign.ProgressBar}" IsIndeterminate="True" Height="6"
+                         VerticalAlignment="Center" Margin="0,0,16,0"
+                         Visibility="{Binding IsScanning, Converter={StaticResource BoolToVis}}"/>
+        </DockPanel>
+
+        <Border DockPanel.Dock="Top" Background="{DynamicResource DangerSoft}" BorderBrush="{DynamicResource DangerOutline}"
+                BorderThickness="1" CornerRadius="8" Padding="12,8" Margin="0,0,0,10"
+                Visibility="{Binding ErrorMessage, Converter={StaticResource StrVis}}">
+            <TextBlock Text="{Binding ErrorMessage}" Foreground="{DynamicResource Danger}" TextWrapping="Wrap"/>
+        </Border>
+
+        <Border Style="{StaticResource Redesign.Card}" Padding="0" ClipToBounds="True">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Border Grid.Row="0" Background="{DynamicResource Surface2}"
+                        BorderBrush="{DynamicResource Border}" BorderThickness="0,0,0,1" Padding="16,10">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="76"/>
+                            <ColumnDefinition Width="104"/>
+                            <ColumnDefinition Width="80"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0" Text="{DynamicResource WS_FindSource_ColPath}"
+                                   FontSize="12.5" FontWeight="SemiBold" Foreground="{DynamicResource OnSurfaceSecondary}"/>
+                        <TextBlock Grid.Column="1" Text="{DynamicResource WS_FindSource_ColType}"
+                                   FontSize="12.5" FontWeight="SemiBold" Foreground="{DynamicResource OnSurfaceSecondary}"
+                                   HorizontalAlignment="Center"/>
+                        <TextBlock Grid.Column="2" Text="{DynamicResource WS_FindSource_ColSize}"
+                                   FontSize="12.5" FontWeight="SemiBold" Foreground="{DynamicResource OnSurfaceSecondary}"
+                                   TextAlignment="Right"/>
+                        <TextBlock Grid.Column="3" Text="{DynamicResource WS_FindSource_ColEditions}"
+                                   FontSize="12.5" FontWeight="SemiBold" Foreground="{DynamicResource OnSurfaceSecondary}"
+                                   TextAlignment="Right"/>
+                    </Grid>
+                </Border>
+
+                <ListBox x:Name="ResultsList" Grid.Row="1"
+                         ItemsSource="{Binding Results}" SelectedItem="{Binding Selected}"
+                         Background="Transparent" BorderThickness="0"
+                         HorizontalContentAlignment="Stretch"
+                         ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                         MouseDoubleClick="ResultsList_MouseDoubleClick"
+                         KeyDown="ResultsList_KeyDown">
+                    <ListBox.ItemContainerStyle>
+                        <Style TargetType="ListBoxItem">
+                            <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="ListBoxItem">
+                                        <Border x:Name="RowBd" Padding="16,11"
+                                                Background="Transparent"
+                                                BorderBrush="{DynamicResource Border}"
+                                                BorderThickness="0,0,0,1"
+                                                SnapsToDevicePixels="True">
+                                            <ContentPresenter HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
+                                        </Border>
+                                        <ControlTemplate.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter TargetName="RowBd" Property="Background" Value="{DynamicResource Surface2}"/>
+                                            </Trigger>
+                                            <Trigger Property="IsSelected" Value="True">
+                                                <Setter TargetName="RowBd" Property="Background" Value="{DynamicResource PrimarySoft}"/>
+                                                <Setter TargetName="RowBd" Property="BorderBrush" Value="{DynamicResource PrimaryOutline}"/>
+                                            </Trigger>
+                                        </ControlTemplate.Triggers>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </ListBox.ItemContainerStyle>
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="76"/>
+                                    <ColumnDefinition Width="104"/>
+                                    <ColumnDefinition Width="80"/>
+                                </Grid.ColumnDefinitions>
+
+                                <StackPanel Grid.Column="0" Margin="0,0,14,0" VerticalAlignment="Center">
+                                    <TextBlock Text="{Binding FileName}" FontSize="13.5" FontWeight="SemiBold"
+                                               Foreground="{DynamicResource OnSurface}" TextTrimming="CharacterEllipsis"/>
+                                    <TextBlock Text="{Binding SummaryText}" FontSize="12" FontWeight="Medium"
+                                               Foreground="{DynamicResource Primary}" Margin="0,2,0,0"
+                                               TextTrimming="CharacterEllipsis"
+                                               Visibility="{Binding SummaryText, Converter={StaticResource StrVis}}"/>
+                                    <TextBlock Text="{Binding DirectoryPath}" FontSize="11.5"
+                                               Foreground="{DynamicResource OnSurfaceMuted}" Margin="0,2,0,0"
+                                               TextTrimming="CharacterEllipsis"/>
+                                </StackPanel>
+
+                                <Border Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center"
+                                        Background="{DynamicResource Surface2}" BorderBrush="{DynamicResource Border}"
+                                        BorderThickness="1" CornerRadius="5" Padding="8,2">
+                                    <TextBlock Text="{Binding KindLabel}" FontSize="11.5" FontWeight="SemiBold"
+                                               Foreground="{DynamicResource OnSurfaceSecondary}"/>
+                                </Border>
+
+                                <TextBlock Grid.Column="2" VerticalAlignment="Center"
+                                           Text="{Binding Candidate.Size, Converter={StaticResource BytesText}}"
+                                           FontSize="13" Foreground="{DynamicResource OnSurface}" TextAlignment="Right"/>
+
+                                <TextBlock Grid.Column="3" VerticalAlignment="Center"
+                                           Text="{Binding EditionCount}"
+                                           FontSize="13" FontWeight="SemiBold" Foreground="{DynamicResource OnSurface}" TextAlignment="Right"/>
+                            </Grid>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+
+                <Border Grid.Row="1" Background="{DynamicResource Surface2}" BorderBrush="{DynamicResource Border}"
+                        BorderThickness="1" CornerRadius="8" Padding="18"
+                        HorizontalAlignment="Center" VerticalAlignment="Center"
+                        Visibility="{Binding IsEmpty, Converter={StaticResource BoolToVis}}">
+                    <TextBlock Text="{DynamicResource WS_FindSource_Empty}"
+                               Foreground="{DynamicResource OnSurfaceMuted}" FontWeight="Medium" TextWrapping="Wrap"/>
+                </Border>
+            </Grid>
+        </Border>
+    </DockPanel>
+</fw:FeatureWindow>

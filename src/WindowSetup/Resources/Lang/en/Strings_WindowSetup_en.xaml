@@ -1,0 +1,286 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    <sys:String x:Key="WS_Title">Felix WinDeploy</sys:String>
+    <sys:String x:Key="WS_Start">Install Windows</sys:String>
+    <sys:String x:Key="WS_Browse">Browse...</sys:String>
+    <sys:String x:Key="WS_FindSource">Find Source</sys:String>
+    <sys:String x:Key="WS_Refresh">Refresh</sys:String>
+    <sys:String x:Key="WS_Back">Back</sys:String>
+    <sys:String x:Key="WS_Cancel">Cancel</sys:String>
+    <sys:String x:Key="WS_Close">Close</sys:String>
+    <sys:String x:Key="WS_Use">Use</sys:String>
+
+    <sys:String x:Key="WS_Source">Windows image</sys:String>
+    <sys:String x:Key="WS_Image">Image</sys:String>
+    <sys:String x:Key="WS_Edition">Edition</sys:String>
+
+    <sys:String x:Key="WS_Target">Target</sys:String>
+    <sys:String x:Key="WS_Mode_Existing">Install to partition</sys:String>
+    <sys:String x:Key="WS_Mode_Erase">Erase disk and install</sys:String>
+    <sys:String x:Key="WS_Firmware_Prefix">Firmware:</sys:String>
+    <sys:String x:Key="WS_Firmware_UEFI">UEFI / GPT</sys:String>
+    <sys:String x:Key="WS_Firmware_BIOS">BIOS / MBR</sys:String>
+
+    <sys:String x:Key="WS_Role_Windows">Windows</sys:String>
+    <sys:String x:Key="WS_Role_Efi">EFI</sys:String>
+    <sys:String x:Key="WS_Role_System">System</sys:String>
+    <sys:String x:Key="WS_Role_Recovery">Recovery</sys:String>
+    <sys:String x:Key="WS_Role_DoNotUse">Do not use</sys:String>
+    <sys:String x:Key="WS_Unallocated">Unallocated</sys:String>
+    <sys:String x:Key="WS_Summary_Windows">Windows (format)</sys:String>
+    <sys:String x:Key="WS_Summary_System">EFI / System</sys:String>
+    <sys:String x:Key="WS_Summary_Recovery">Recovery</sys:String>
+    <sys:String x:Key="WS_Summary_Keep">Keep</sys:String>
+
+    <sys:String x:Key="WS_Block_FelixPe">FelixPE media</sys:String>
+    <sys:String x:Key="WS_Block_RunningWindows">Running Windows</sys:String>
+    <sys:String x:Key="WS_Block_ReadOnly">Read-only</sys:String>
+    <sys:String x:Key="WS_Block_Offline">Offline</sys:String>
+    <sys:String x:Key="WS_Block_Dynamic">Dynamic disk</sys:String>
+    <sys:String x:Key="WS_Block_HoldsSetupFiles">Contains setup files</sys:String>
+    <sys:String x:Key="WS_Block_DesktopPhysicalDisk">Only writable in FelixPE</sys:String>
+    <sys:String x:Key="WS_PartitionBlock_StyleMismatch">Disk style does not match firmware</sys:String>
+    <sys:String x:Key="WS_PartitionBlock_NoSystemPartition">No compatible EFI/System partition</sys:String>
+
+    <sys:String x:Key="WS_Options">Deployment configuration</sys:String>
+    <sys:String x:Key="WS_Unattend">Unattend.xml</sys:String>
+    <sys:String x:Key="WS_Create">Create...</sys:String>
+    <sys:String x:Key="WS_Option_VerifyImage">Verify image</sys:String>
+    <sys:String x:Key="WS_Option_BypassMsAccount">No Microsoft account</sys:String>
+    <sys:String x:Key="WS_Option_ClearBootMenu">Clear boot menu</sys:String>
+    <sys:String x:Key="WS_Option_RestartWhenComplete">Restart when complete</sys:String>
+
+    <sys:String x:Key="WS_Unattend_Title">Create Unattend.xml</sys:String>
+    <sys:String x:Key="WS_Unattend_Username">Username</sys:String>
+    <sys:String x:Key="WS_Unattend_Password">Password</sys:String>
+    <sys:String x:Key="WS_Unattend_Generate">Generate</sys:String>
+    <sys:String x:Key="WS_Unattend_ComputerName">Computer name</sys:String>
+    <sys:String x:Key="WS_Unattend_TimeZone">Time zone</sys:String>
+    <sys:String x:Key="WS_Unattend_Locale">Locale</sys:String>
+    <sys:String x:Key="WS_Unattend_SkipOobe">Skip OOBE pages</sys:String>
+    <sys:String x:Key="WS_Unattend_AutoLogon">Auto-logon once</sys:String>
+    <sys:String x:Key="WS_Unattend_ClearPassword">Clear password on first logon</sys:String>
+    <sys:String x:Key="WS_Unattend_SaveAs">Save as...</sys:String>
+
+    <sys:String x:Key="WS_Installation">Installation</sys:String>
+    <sys:String x:Key="WS_Logs">Logs</sys:String>
+    <sys:String x:Key="WS_Stage_Ready">Ready</sys:String>
+    <sys:String x:Key="WS_Stage_VerifySource_Running">Verifying Windows image...</sys:String>
+    <sys:String x:Key="WS_Stage_ApplyWindows_Running">Applying Windows image...</sys:String>
+
+    <sys:String x:Key="WS_FindSource_Title">Find Windows source</sys:String>
+    <sys:String x:Key="WS_FindSource_ColPath">Path</sys:String>
+    <sys:String x:Key="WS_FindSource_ColType">Type</sys:String>
+    <sys:String x:Key="WS_FindSource_ColSize">Size</sys:String>
+    <sys:String x:Key="WS_FindSource_ColEditions">Editions</sys:String>
+    <sys:String x:Key="WS_FindSource_Empty">No Windows ISO, WIM, ESD, or SWM image was found on available drives.</sys:String>
+
+    <sys:String x:Key="WS_Review_Title">Review installation</sys:String>
+    <sys:String x:Key="WS_Review_Windows">Windows</sys:String>
+    <sys:String x:Key="WS_Review_Source">Source</sys:String>
+    <sys:String x:Key="WS_Review_Disk">Disk</sys:String>
+    <sys:String x:Key="WS_Review_WindowsPartition">Windows partition</sys:String>
+    <sys:String x:Key="WS_Review_SystemPartition">EFI / System</sys:String>
+    <sys:String x:Key="WS_Review_RecoveryPartition">Recovery</sys:String>
+    <sys:String x:Key="WS_Review_Keep">Keep</sys:String>
+    <sys:String x:Key="WS_Review_Setup">Setup</sys:String>
+    <sys:String x:Key="WS_Review_Options">Options</sys:String>
+    <sys:String x:Key="WS_Review_TypeDiskNumber">Type the disk number to confirm erase</sys:String>
+    <sys:String x:Key="WS_Review_EraseWarning">All partitions and data on the selected disk will be erased.</sys:String>
+    <sys:String x:Key="WS_Review_FormatWarning">The selected Windows partition will be formatted.</sys:String>
+
+    <sys:String x:Key="WS_ClosingBlocked">Felix WinDeploy cannot close while disk preparation or installation is running.</sys:String>
+    <sys:String x:Key="WS_ClosingBlockedTitle">Installation in progress</sys:String>
+    <sys:String x:Key="WS_LanguageToggle">EN</sys:String>
+    <sys:String x:Key="WS_ThemeLight">Light</sys:String>
+    <sys:String x:Key="WS_ThemeDark">Dark</sys:String>
+
+    <sys:String x:Key="WS_Option_ExportWifi">Export connected Wi-Fi</sys:String>
+    <sys:String x:Key="WS_Option_BackupPrinters">Backup printers</sys:String>
+    <sys:String x:Key="WS_Drivers_Configure">Select drivers...</sys:String>
+    <sys:String x:Key="WS_Drivers_WindowsFolder">Windows drivers</sys:String>
+    <sys:String x:Key="WS_Drivers_WinPeFolder">WinPE drivers</sys:String>
+    <sys:String x:Key="WS_Drivers_Title">Select drivers to back up</sys:String>
+    <sys:String x:Key="WS_Drivers_PresetRecommended">Recommended</sys:String>
+    <sys:String x:Key="WS_Drivers_PresetMinimum">Minimum</sys:String>
+    <sys:String x:Key="WS_Drivers_PresetAll">All</sys:String>
+    <sys:String x:Key="WS_Drivers_PresetClear">Clear</sys:String>
+    <sys:String x:Key="WS_Drivers_KeepLatest">Keep latest only</sys:String>
+    <sys:String x:Key="WS_Drivers_ColPublished">Published INF</sys:String>
+    <sys:String x:Key="WS_Drivers_ColInf">Original INF</sys:String>
+    <sys:String x:Key="WS_Drivers_ColClass">Class</sys:String>
+    <sys:String x:Key="WS_Drivers_ColProvider">Provider</sys:String>
+    <sys:String x:Key="WS_Drivers_ColVersion">Version</sys:String>
+    <sys:String x:Key="WS_Drivers_ColDate">Date</sys:String>
+    <sys:String x:Key="WS_Drivers_Apply">Apply</sys:String>
+    <sys:String x:Key="WS_Option_CreateRecovery">Create Recovery partition</sys:String>
+    <sys:String x:Key="WS_Option_ParallelWindows">Add parallel Windows to boot menu</sys:String>
+    <sys:String x:Key="WS_ExtraWinPe">Extra WinPE</sys:String>
+    <sys:String x:Key="WS_FindWinPe">Find WinPE</sys:String>
+    <sys:String x:Key="WS_ExtraWinPe_NoneFound">No WinPE .wim image was found on internal drives.</sys:String>
+    <sys:String x:Key="WS_Option_InstallSilently">Install apps silently</sys:String>
+    <sys:String x:Key="WS_Option_DesktopReport">Write desktop report</sys:String>
+    <sys:String x:Key="WS_RemoteApps_Configure">Remote apps...</sys:String>
+    <sys:String x:Key="WS_RemoteApps_Title">Remote support applications</sys:String>
+    <sys:String x:Key="WS_RemoteApps_TeamViewerSession">Reads ID and session password on first desktop</sys:String>
+    <sys:String x:Key="WS_Copy">Copy</sys:String>
+    <sys:String x:Key="WS_FirstDesktop">At first desktop</sys:String>
+    <sys:String x:Key="WS_FirstDesktop_None">Nothing</sys:String>
+    <sys:String x:Key="WS_FirstDesktop_Portable">Portable .exe</sys:String>
+    <sys:String x:Key="WS_FirstDesktop_Zip">ZIP archive</sys:String>
+    <sys:String x:Key="WS_FirstDesktop_ZipProgram">Program in ZIP</sys:String>
+    <sys:String x:Key="WS_Tab_Source">Source</sys:String>
+    <sys:String x:Key="WS_Tab_Target">Target</sys:String>
+    <sys:String x:Key="WS_Tab_Options">Options</sys:String>
+    <sys:String x:Key="WS_Group_DriversNetwork">Drivers &amp; network</sys:String>
+    <sys:String x:Key="WS_Group_BootRecovery">Boot &amp; recovery</sys:String>
+    <sys:String x:Key="WS_Group_FirstBoot">First boot</sys:String>
+    <sys:String x:Key="WS_Group_Unattend">Unattended setup</sys:String>
+    <sys:String x:Key="WS_FelixPe_Group">WinPE handoff</sys:String>
+    <sys:String x:Key="WS_FelixPe">FelixPE boot image</sys:String>
+    <sys:String x:Key="WS_Handoff_Title">Ready to restart into FelixPE</sys:String>
+    <sys:String x:Key="WS_Handoff_Staging">Staging volume</sys:String>
+    <sys:String x:Key="WS_Handoff_RestartNow">Restart now</sys:String>
+    <sys:String x:Key="WS_Handoff_NextRestart">Install on next restart</sys:String>
+    <sys:String x:Key="WS_Handoff_Cancel">Cancel preparation</sys:String>
+    <sys:String x:Key="WS_Resume_Title">Felix WinDeploy</sys:String>
+    <sys:String x:Key="WS_Resume_Heading">Completing Windows installation</sys:String>
+    <sys:String x:Key="WS_Resume_Source">Image</sys:String>
+    <sys:String x:Key="WS_Resume_Target">Target</sys:String>
+    <sys:String x:Key="WS_Resume_Rebooting">Installation completed. Restarting...</sys:String>
+    <sys:String x:Key="WS_Resume_Done">Installation completed.</sys:String>
+
+    <sys:String x:Key="WS_Nav_Install">Install Windows</sys:String>
+    <sys:String x:Key="WS_Nav_Hardware">Hardware &amp; Advice</sys:String>
+    <sys:String x:Key="WS_Disk_Prefix">Disk</sys:String>
+    <sys:String x:Key="WS_Source_CardTitle">Windows image</sys:String>
+    <sys:String x:Key="WS_Target_CardTitle">Target disk &amp; partitions</sys:String>
+    <sys:String x:Key="WS_Options_CardTitle">Deployment configuration</sys:String>
+    <sys:String x:Key="WS_Source_Download">Download</sys:String>
+    <sys:String x:Key="WS_Source_VerifyGenuine">Check genuine</sys:String>
+    <sys:String x:Key="WS_Source_VerifyOn">Verify image: On</sys:String>
+    <sys:String x:Key="WS_Source_VerifyOff">Verify image: Off</sys:String>
+    <sys:String x:Key="WS_Clipboard">Clipboard</sys:String>
+    <sys:String x:Key="WS_Clipboard_Invalid">Clipboard does not contain a valid ISO, WIM, ESD, or SWM path.</sys:String>
+
+    <sys:String x:Key="WS_RoleCombo_Windows">Windows partition</sys:String>
+    <sys:String x:Key="WS_RoleCombo_System">EFI / System partition</sys:String>
+    <sys:String x:Key="WS_RoleCombo_Recovery">Recovery partition</sys:String>
+    <sys:String x:Key="WS_BitLocker_Unlock">Unlock BitLocker...</sys:String>
+    <sys:String x:Key="WS_BitLocker_TurnOff">Turn off BitLocker</sys:String>
+    <sys:String x:Key="WS_BitLocker_Title">Unlock BitLocker</sys:String>
+    <sys:String x:Key="WS_BitLocker_ModePassword">Password</sys:String>
+    <sys:String x:Key="WS_BitLocker_ModeRecoveryKey">48-digit recovery key</sys:String>
+    <sys:String x:Key="WS_BitLocker_UnlockBtn">Unlock</sys:String>
+
+    <sys:String x:Key="WS_Pill_DriversOn">Back up drivers: On</sys:String>
+    <sys:String x:Key="WS_Pill_DriversOff">Back up drivers: Off</sys:String>
+    <sys:String x:Key="WS_Pill_RemoteOn">Remote apps: On</sys:String>
+    <sys:String x:Key="WS_Pill_RemoteOff">Remote apps: Off</sys:String>
+    <sys:String x:Key="WS_Pill_BloatwareOn">Bloatware: On</sys:String>
+    <sys:String x:Key="WS_Pill_BloatwareOff">Bloatware: Off</sys:String>
+    <sys:String x:Key="WS_Drivers_StorageWarning">Missing critical storage driver:</sys:String>
+    <sys:String x:Key="WS_Unattend_Generated">(Generated)</sys:String>
+    <sys:String x:Key="WS_Unattend_Clear">Clear</sys:String>
+
+    <sys:String x:Key="WS_Download_Title">Download Windows image</sys:String>
+    <sys:String x:Key="WS_Download_ActionRun">Download &amp; run</sys:String>
+    <sys:String x:Key="WS_Download_ActionOpen">Open website</sys:String>
+
+    <sys:String x:Key="WS_Integrity_Title">Image verification</sys:String>
+    <sys:String x:Key="WS_Integrity_File">File</sys:String>
+    <sys:String x:Key="WS_Integrity_Size">Size</sys:String>
+    <sys:String x:Key="WS_Integrity_Sha256">SHA-256</sys:String>
+    <sys:String x:Key="WS_Integrity_Sidecar">Sidecar SHA-256</sys:String>
+    <sys:String x:Key="WS_Integrity_Signature">Digital signature</sys:String>
+    <sys:String x:Key="WS_Integrity_Match">Matched</sys:String>
+    <sys:String x:Key="WS_Integrity_Mismatch">Mismatch</sys:String>
+    <sys:String x:Key="WS_Integrity_None">Not found</sys:String>
+
+    <sys:String x:Key="WS_Bloatware_Title">Bloatware removal</sys:String>
+    <sys:String x:Key="WS_Bloatware_Enable">Remove selected built-in Store apps</sys:String>
+    <sys:String x:Key="WS_Bloatware_BlockPromoted">Block promoted Store app downloads for new accounts</sys:String>
+    <sys:String x:Key="WS_Bloatware_Scan">Scan image</sys:String>
+
+    <sys:String x:Key="WS_About_AppTitle">Felix WinDeploy</sys:String>
+    <sys:String x:Key="WS_About_Version">Version</sys:String>
+    <sys:String x:Key="WS_About_Environment">Environment</sys:String>
+    <sys:String x:Key="WS_About_Firmware">Firmware</sys:String>
+    <sys:String x:Key="WS_About_Language">Language</sys:String>
+    <sys:String x:Key="WS_About_Theme">Theme</sys:String>
+
+    <sys:String x:Key="WS_Pill_RecordOn">Record: On</sys:String>
+    <sys:String x:Key="WS_Pill_RecordOff">Record: Off</sys:String>
+    <sys:String x:Key="WS_Record_Title">WinPE screen recording</sys:String>
+    <sys:String x:Key="WS_Record_None">Do not record</sys:String>
+    <sys:String x:Key="WS_Record_Video">Record video (MP4)</sys:String>
+    <sys:String x:Key="WS_Record_Screenshots">Take periodic screenshots (PNG)</sys:String>
+    <sys:String x:Key="WS_Record_Both">Record video and screenshots</sys:String>
+    <sys:String x:Key="WS_Record_Interval">Screenshot interval</sys:String>
+    <sys:String x:Key="WS_Record_Minutes">Minutes</sys:String>
+    <sys:String x:Key="WS_Record_Seconds">Seconds</sys:String>
+
+    <sys:String x:Key="WS_RescueUsb">Rescue USB</sys:String>
+    <sys:String x:Key="WS_RescueUsb_None">Do not create</sys:String>
+    <sys:String x:Key="WS_RescueUsb_MakeBtn">Make rescue USB</sys:String>
+    <sys:String x:Key="WS_RescueUsb_Title">Create Felix Boot Rescue USB</sys:String>
+    <sys:String x:Key="WS_RescueUsb_Mode">Preparation mode</sys:String>
+    <sys:String x:Key="WS_RescueUsb_KeepData">Add rescue files to FAT32 partition (keeps existing files)</sys:String>
+    <sys:String x:Key="WS_RescueUsb_EraseWarn">Warning: the entire selected USB drive will be erased.</sys:String>
+    <sys:String x:Key="WS_RescueUsb_TypeConfirm">Type confirmation token</sys:String>
+    <sys:String x:Key="WS_RescueUsb_Create">Create USB</sys:String>
+
+    <sys:String x:Key="WS_Resume_SafeStop">Safe stop</sys:String>
+    <sys:String x:Key="WS_Resume_Continue">Continue</sys:String>
+    <sys:String x:Key="WS_Resume_Retry">Retry step</sys:String>
+    <sys:String x:Key="WS_Resume_CancelToOldWin">Cancel &amp; return to old Windows</sys:String>
+    <sys:String x:Key="WS_Resume_OpenCmd">Open CMD</sys:String>
+    <sys:String x:Key="WS_Resume_Restart">Restart</sys:String>
+    <sys:String x:Key="WS_Resume_Shutdown">Shut down</sys:String>
+    <sys:String x:Key="WS_Resume_Log">Installation log</sys:String>
+
+    <sys:String x:Key="WS_Nav_Backup">Back up Windows</sys:String>
+    <sys:String x:Key="WS_StartBackup">Start backup</sys:String>
+    <sys:String x:Key="WS_Download_OpenFelix">Download on Felix Platforms</sys:String>
+    <sys:String x:Key="WS_Hw_BoardFirmware">Mainboard &amp; Firmware</sys:String>
+    <sys:String x:Key="WS_Hw_RecommendedTitle">Recommended Windows Edition</sys:String>
+    <sys:String x:Key="WS_Hw_EditionsTitle">Compatible Windows Editions</sys:String>
+    <sys:String x:Key="WS_Hw_ChecksTitle">Hardware Assessment</sys:String>
+    <sys:String x:Key="WS_Hw_Loading">Scanning system hardware...</sys:String>
+
+    <sys:String x:Key="WS_Backup_SourceCard">Source &amp; archive</sys:String>
+    <sys:String x:Key="WS_Backup_SourceWin">Windows source</sys:String>
+    <sys:String x:Key="WS_Backup_Format">Archive format</sys:String>
+    <sys:String x:Key="WS_Backup_SwmSplit">SWM split (MiB)</sys:String>
+    <sys:String x:Key="WS_Backup_Output">Destination file</sys:String>
+    <sys:String x:Key="WS_Backup_ImageName">Image name</sys:String>
+    <sys:String x:Key="WS_Backup_Description">Description</sys:String>
+
+    <sys:String x:Key="WS_Backup_MethodCard">Capture mode</sys:String>
+    <sys:String x:Key="WS_Backup_MethodLive">Live snapshot (VSS) or direct offline capture</sys:String>
+    <sys:String x:Key="WS_Backup_MethodWinPe">One-time WinPE reboot for clean offline capture</sys:String>
+    <sys:String x:Key="WS_Backup_MethodSysprep">Sysprep generalize (/generalize /oobe) + WinPE capture</sys:String>
+    <sys:String x:Key="WS_Backup_Portable">Patch hardware portability (clear MountedDevices, storage Start=0)</sys:String>
+    <sys:String x:Key="WS_Backup_ShutdownAfter">Shut down computer after backup finishes</sys:String>
+
+    <sys:String x:Key="WS_Backup_SysprepCard">Sysprep &amp; safety rollback</sys:String>
+    <sys:String x:Key="WS_Backup_SysprepGeneralize">Generalize hardware identity (/generalize)</sys:String>
+    <sys:String x:Key="WS_Backup_SysprepAudit">Boot into Audit mode (/audit)</sys:String>
+    <sys:String x:Key="WS_Backup_SysprepStripDrivers">Remove third-party drivers before Sysprep</sys:String>
+    <sys:String x:Key="WS_Backup_SysprepStripStorage">Also remove third-party storage drivers</sys:String>
+    <sys:String x:Key="WS_Backup_SysprepRestoreSuccess">Auto-restore safety backup to keep current Windows intact</sys:String>
+    <sys:String x:Key="WS_Backup_SysprepRestoreFail">Auto-restore safety backup after 60s if Sysprep fails</sys:String>
+    <sys:String x:Key="WS_Backup_SysprepUnattend">Sysprep Unattend.xml</sys:String>
+
+    <sys:String x:Key="WS_ResumeBackup_Heading">WinPE Windows Backup</sys:String>
+    <sys:String x:Key="WS_ResumeBackup_RestoreNow">Restore safety backup now</sys:String>
+    <sys:String x:Key="WS_ResumeBackup_DoNotRestore">Do not restore</sys:String>
+
+    <sys:String x:Key="WS_Badge_On">On</sys:String>
+    <sys:String x:Key="WS_Badge_Off">Off</sys:String>
+    <sys:String x:Key="WS_Module_Drivers">Driver backup</sys:String>
+    <sys:String x:Key="WS_Module_Remote">Remote support</sys:String>
+    <sys:String x:Key="WS_Module_Record">WinPE recording</sys:String>
+    <sys:String x:Key="WS_Module_Bloatware">Bloatware filter</sys:String>
+</ResourceDictionary>

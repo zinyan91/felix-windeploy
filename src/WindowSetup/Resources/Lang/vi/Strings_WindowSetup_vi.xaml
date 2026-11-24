@@ -1,0 +1,286 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    <sys:String x:Key="WS_Title">Felix WinDeploy</sys:String>
+    <sys:String x:Key="WS_Start">Cài Windows</sys:String>
+    <sys:String x:Key="WS_Browse">Chọn…</sys:String>
+    <sys:String x:Key="WS_FindSource">Tìm bộ cài</sys:String>
+    <sys:String x:Key="WS_Refresh">Làm mới</sys:String>
+    <sys:String x:Key="WS_Back">Quay lại</sys:String>
+    <sys:String x:Key="WS_Cancel">Huỷ</sys:String>
+    <sys:String x:Key="WS_Close">Đóng</sys:String>
+    <sys:String x:Key="WS_Use">Dùng</sys:String>
+
+    <sys:String x:Key="WS_Source">Ảnh cài đặt Windows</sys:String>
+    <sys:String x:Key="WS_Image">Bộ cài</sys:String>
+    <sys:String x:Key="WS_Edition">Phiên bản</sys:String>
+
+    <sys:String x:Key="WS_Target">Đích cài đặt</sys:String>
+    <sys:String x:Key="WS_Mode_Existing">Cài vào partition</sys:String>
+    <sys:String x:Key="WS_Mode_Erase">Xoá đĩa và cài</sys:String>
+    <sys:String x:Key="WS_Firmware_Prefix">Firmware:</sys:String>
+    <sys:String x:Key="WS_Firmware_UEFI">UEFI / GPT</sys:String>
+    <sys:String x:Key="WS_Firmware_BIOS">BIOS / MBR</sys:String>
+
+    <sys:String x:Key="WS_Role_Windows">Windows</sys:String>
+    <sys:String x:Key="WS_Role_Efi">EFI</sys:String>
+    <sys:String x:Key="WS_Role_System">System</sys:String>
+    <sys:String x:Key="WS_Role_Recovery">Recovery</sys:String>
+    <sys:String x:Key="WS_Role_DoNotUse">Không dùng</sys:String>
+    <sys:String x:Key="WS_Unallocated">Trống</sys:String>
+    <sys:String x:Key="WS_Summary_Windows">Windows (sẽ format)</sys:String>
+    <sys:String x:Key="WS_Summary_System">EFI / System</sys:String>
+    <sys:String x:Key="WS_Summary_Recovery">Recovery</sys:String>
+    <sys:String x:Key="WS_Summary_Keep">Giữ nguyên</sys:String>
+
+    <sys:String x:Key="WS_Block_FelixPe">Chứa FelixPE</sys:String>
+    <sys:String x:Key="WS_Block_RunningWindows">Đang chạy Windows</sys:String>
+    <sys:String x:Key="WS_Block_ReadOnly">Chỉ đọc</sys:String>
+    <sys:String x:Key="WS_Block_Offline">Ngoại tuyến</sys:String>
+    <sys:String x:Key="WS_Block_Dynamic">Đĩa Dynamic</sys:String>
+    <sys:String x:Key="WS_Block_HoldsSetupFiles">Chứa tệp cài đặt</sys:String>
+    <sys:String x:Key="WS_Block_DesktopPhysicalDisk">Chỉ ghi trong FelixPE</sys:String>
+    <sys:String x:Key="WS_PartitionBlock_StyleMismatch">Kiểu đĩa không khớp firmware</sys:String>
+    <sys:String x:Key="WS_PartitionBlock_NoSystemPartition">Thiếu phân vùng EFI/System hợp lệ</sys:String>
+
+    <sys:String x:Key="WS_Options">Cấu hình triển khai</sys:String>
+    <sys:String x:Key="WS_Unattend">Unattend.xml</sys:String>
+    <sys:String x:Key="WS_Create">Tạo...</sys:String>
+    <sys:String x:Key="WS_Option_VerifyImage">Kiểm tra bộ cài</sys:String>
+    <sys:String x:Key="WS_Option_BypassMsAccount">Bỏ tài khoản Microsoft</sys:String>
+    <sys:String x:Key="WS_Option_ClearBootMenu">Dọn menu boot</sys:String>
+    <sys:String x:Key="WS_Option_RestartWhenComplete">Tự khởi động lại khi xong</sys:String>
+
+    <sys:String x:Key="WS_Unattend_Title">Tạo Unattend.xml</sys:String>
+    <sys:String x:Key="WS_Unattend_Username">Tên tài khoản</sys:String>
+    <sys:String x:Key="WS_Unattend_Password">Mật khẩu</sys:String>
+    <sys:String x:Key="WS_Unattend_Generate">Tạo</sys:String>
+    <sys:String x:Key="WS_Unattend_ComputerName">Tên máy</sys:String>
+    <sys:String x:Key="WS_Unattend_TimeZone">Múi giờ</sys:String>
+    <sys:String x:Key="WS_Unattend_Locale">Vùng và ngôn ngữ</sys:String>
+    <sys:String x:Key="WS_Unattend_SkipOobe">Bỏ qua các trang OOBE</sys:String>
+    <sys:String x:Key="WS_Unattend_AutoLogon">Tự đăng nhập một lần</sys:String>
+    <sys:String x:Key="WS_Unattend_ClearPassword">Xoá mật khẩu ở lần đăng nhập đầu</sys:String>
+    <sys:String x:Key="WS_Unattend_SaveAs">Lưu thành...</sys:String>
+
+    <sys:String x:Key="WS_Installation">Cài đặt</sys:String>
+    <sys:String x:Key="WS_Logs">Nhật ký</sys:String>
+    <sys:String x:Key="WS_Stage_Ready">Sẵn sàng</sys:String>
+    <sys:String x:Key="WS_Stage_VerifySource_Running">Đang kiểm tra toàn vẹn bộ cài...</sys:String>
+    <sys:String x:Key="WS_Stage_ApplyWindows_Running">Đang bung bộ cài Windows...</sys:String>
+
+    <sys:String x:Key="WS_FindSource_Title">Tìm nguồn Windows</sys:String>
+    <sys:String x:Key="WS_FindSource_ColPath">Đường dẫn</sys:String>
+    <sys:String x:Key="WS_FindSource_ColType">Loại</sys:String>
+    <sys:String x:Key="WS_FindSource_ColSize">Dung lượng</sys:String>
+    <sys:String x:Key="WS_FindSource_ColEditions">Số bản</sys:String>
+    <sys:String x:Key="WS_FindSource_Empty">Không tìm thấy tệp ISO, WIM, ESD hoặc SWM cài Windows trên các ổ đĩa.</sys:String>
+
+    <sys:String x:Key="WS_Review_Title">Xem lại cấu hình cài đặt</sys:String>
+    <sys:String x:Key="WS_Review_Windows">Windows</sys:String>
+    <sys:String x:Key="WS_Review_Source">Nguồn</sys:String>
+    <sys:String x:Key="WS_Review_Disk">Đĩa</sys:String>
+    <sys:String x:Key="WS_Review_WindowsPartition">Phân vùng Windows</sys:String>
+    <sys:String x:Key="WS_Review_SystemPartition">EFI / System</sys:String>
+    <sys:String x:Key="WS_Review_RecoveryPartition">Recovery</sys:String>
+    <sys:String x:Key="WS_Review_Keep">Giữ nguyên</sys:String>
+    <sys:String x:Key="WS_Review_Setup">Thiết lập</sys:String>
+    <sys:String x:Key="WS_Review_Options">Tuỳ chọn</sys:String>
+    <sys:String x:Key="WS_Review_TypeDiskNumber">Nhập số đĩa để xác nhận xoá</sys:String>
+    <sys:String x:Key="WS_Review_EraseWarning">Toàn bộ phân vùng và dữ liệu trên đĩa đã chọn sẽ bị xoá.</sys:String>
+    <sys:String x:Key="WS_Review_FormatWarning">Phân vùng Windows đã chọn sẽ bị format.</sys:String>
+
+    <sys:String x:Key="WS_ClosingBlocked">Không thể đóng Felix WinDeploy khi đang chuẩn bị đĩa hoặc cài đặt.</sys:String>
+    <sys:String x:Key="WS_ClosingBlockedTitle">Đang cài đặt</sys:String>
+    <sys:String x:Key="WS_LanguageToggle">VI</sys:String>
+    <sys:String x:Key="WS_ThemeLight">Sáng</sys:String>
+    <sys:String x:Key="WS_ThemeDark">Tối</sys:String>
+
+    <sys:String x:Key="WS_Option_ExportWifi">Xuất Wi-Fi đang kết nối</sys:String>
+    <sys:String x:Key="WS_Option_BackupPrinters">Sao lưu máy in</sys:String>
+    <sys:String x:Key="WS_Drivers_Configure">Chọn driver...</sys:String>
+    <sys:String x:Key="WS_Drivers_WindowsFolder">Driver Windows</sys:String>
+    <sys:String x:Key="WS_Drivers_WinPeFolder">Driver WinPE</sys:String>
+    <sys:String x:Key="WS_Drivers_Title">Chọn driver để sao lưu</sys:String>
+    <sys:String x:Key="WS_Drivers_PresetRecommended">Khuyến nghị</sys:String>
+    <sys:String x:Key="WS_Drivers_PresetMinimum">Tối thiểu</sys:String>
+    <sys:String x:Key="WS_Drivers_PresetAll">Tất cả</sys:String>
+    <sys:String x:Key="WS_Drivers_PresetClear">Bỏ chọn</sys:String>
+    <sys:String x:Key="WS_Drivers_KeepLatest">Chỉ giữ bản mới nhất</sys:String>
+    <sys:String x:Key="WS_Drivers_ColPublished">Tên INF</sys:String>
+    <sys:String x:Key="WS_Drivers_ColInf">INF gốc</sys:String>
+    <sys:String x:Key="WS_Drivers_ColClass">Nhóm</sys:String>
+    <sys:String x:Key="WS_Drivers_ColProvider">Nhà cung cấp</sys:String>
+    <sys:String x:Key="WS_Drivers_ColVersion">Phiên bản</sys:String>
+    <sys:String x:Key="WS_Drivers_ColDate">Ngày</sys:String>
+    <sys:String x:Key="WS_Drivers_Apply">Áp dụng</sys:String>
+    <sys:String x:Key="WS_Option_CreateRecovery">Tạo phân vùng Recovery mới</sys:String>
+    <sys:String x:Key="WS_Option_ParallelWindows">Thêm Windows song song vào menu boot</sys:String>
+    <sys:String x:Key="WS_ExtraWinPe">Extra WinPE</sys:String>
+    <sys:String x:Key="WS_FindWinPe">Tìm WinPE</sys:String>
+    <sys:String x:Key="WS_ExtraWinPe_NoneFound">Không tìm thấy file .wim WinPE nào trên ổ đĩa gắn trong.</sys:String>
+    <sys:String x:Key="WS_Option_InstallSilently">Cài ứng dụng ngầm</sys:String>
+    <sys:String x:Key="WS_Option_DesktopReport">Ghi báo cáo ra Desktop</sys:String>
+    <sys:String x:Key="WS_RemoteApps_Configure">Hỗ trợ từ xa...</sys:String>
+    <sys:String x:Key="WS_RemoteApps_Title">Ứng dụng hỗ trợ từ xa</sys:String>
+    <sys:String x:Key="WS_RemoteApps_TeamViewerSession">Đọc ID và mật khẩu phiên trên Desktop đầu tiên</sys:String>
+    <sys:String x:Key="WS_Copy">Sao chép</sys:String>
+    <sys:String x:Key="WS_FirstDesktop">Mở ở Desktop đầu</sys:String>
+    <sys:String x:Key="WS_FirstDesktop_None">Không mở</sys:String>
+    <sys:String x:Key="WS_FirstDesktop_Portable">File .exe portable</sys:String>
+    <sys:String x:Key="WS_FirstDesktop_Zip">Gói .zip giải nén</sys:String>
+    <sys:String x:Key="WS_FirstDesktop_ZipProgram">Chương trình trong ZIP</sys:String>
+    <sys:String x:Key="WS_Tab_Source">Nguồn cài</sys:String>
+    <sys:String x:Key="WS_Tab_Target">Đích cài đặt</sys:String>
+    <sys:String x:Key="WS_Tab_Options">Tuỳ chọn</sys:String>
+    <sys:String x:Key="WS_Group_DriversNetwork">Driver &amp; mạng</sys:String>
+    <sys:String x:Key="WS_Group_BootRecovery">Boot &amp; Recovery</sys:String>
+    <sys:String x:Key="WS_Group_FirstBoot">Khởi động lần đầu</sys:String>
+    <sys:String x:Key="WS_Group_Unattend">Cài đặt tự động</sys:String>
+    <sys:String x:Key="WS_FelixPe_Group">Chuyển tiếp qua WinPE</sys:String>
+    <sys:String x:Key="WS_FelixPe">Bộ khởi động FelixPE</sys:String>
+    <sys:String x:Key="WS_Handoff_Title">Sẵn sàng khởi động lại vào FelixPE</sys:String>
+    <sys:String x:Key="WS_Handoff_Staging">Ổ đĩa tạm</sys:String>
+    <sys:String x:Key="WS_Handoff_RestartNow">Khởi động lại ngay</sys:String>
+    <sys:String x:Key="WS_Handoff_NextRestart">Cài ở lần khởi động tới</sys:String>
+    <sys:String x:Key="WS_Handoff_Cancel">Huỷ chuẩn bị</sys:String>
+    <sys:String x:Key="WS_Resume_Title">Felix WinDeploy</sys:String>
+    <sys:String x:Key="WS_Resume_Heading">Đang hoàn tất cài đặt Windows</sys:String>
+    <sys:String x:Key="WS_Resume_Source">Bộ cài</sys:String>
+    <sys:String x:Key="WS_Resume_Target">Đích</sys:String>
+    <sys:String x:Key="WS_Resume_Rebooting">Cài đặt hoàn tất. Đang khởi động lại...</sys:String>
+    <sys:String x:Key="WS_Resume_Done">Cài đặt hoàn tất.</sys:String>
+
+    <sys:String x:Key="WS_Nav_Install">Cài Windows</sys:String>
+    <sys:String x:Key="WS_Nav_Hardware">Phần cứng &amp; Đề xuất</sys:String>
+    <sys:String x:Key="WS_Disk_Prefix">Ổ đĩa</sys:String>
+    <sys:String x:Key="WS_Source_CardTitle">Bộ cài Windows</sys:String>
+    <sys:String x:Key="WS_Target_CardTitle">Ổ đĩa &amp; phân vùng đích</sys:String>
+    <sys:String x:Key="WS_Options_CardTitle">Cấu hình triển khai</sys:String>
+    <sys:String x:Key="WS_Source_Download">Tải bộ cài</sys:String>
+    <sys:String x:Key="WS_Source_VerifyGenuine">Kiểm tra chính hãng</sys:String>
+    <sys:String x:Key="WS_Source_VerifyOn">Kiểm tra bộ cài: Bật</sys:String>
+    <sys:String x:Key="WS_Source_VerifyOff">Kiểm tra bộ cài: Tắt</sys:String>
+    <sys:String x:Key="WS_Clipboard">Clipboard</sys:String>
+    <sys:String x:Key="WS_Clipboard_Invalid">Clipboard không chứa đường dẫn ISO, WIM, ESD hoặc SWM hợp lệ.</sys:String>
+
+    <sys:String x:Key="WS_RoleCombo_Windows">Phân vùng Windows</sys:String>
+    <sys:String x:Key="WS_RoleCombo_System">Phân vùng EFI / System</sys:String>
+    <sys:String x:Key="WS_RoleCombo_Recovery">Phân vùng Recovery</sys:String>
+    <sys:String x:Key="WS_BitLocker_Unlock">Mở khoá BitLocker...</sys:String>
+    <sys:String x:Key="WS_BitLocker_TurnOff">Tắt BitLocker</sys:String>
+    <sys:String x:Key="WS_BitLocker_Title">Mở khoá BitLocker</sys:String>
+    <sys:String x:Key="WS_BitLocker_ModePassword">Mật khẩu</sys:String>
+    <sys:String x:Key="WS_BitLocker_ModeRecoveryKey">Khoá khôi phục 48 số</sys:String>
+    <sys:String x:Key="WS_BitLocker_UnlockBtn">Mở khoá</sys:String>
+
+    <sys:String x:Key="WS_Pill_DriversOn">Sao lưu driver: Bật</sys:String>
+    <sys:String x:Key="WS_Pill_DriversOff">Sao lưu driver: Tắt</sys:String>
+    <sys:String x:Key="WS_Pill_RemoteOn">Ứng dụng từ xa: Bật</sys:String>
+    <sys:String x:Key="WS_Pill_RemoteOff">Ứng dụng từ xa: Tắt</sys:String>
+    <sys:String x:Key="WS_Pill_BloatwareOn">Bloatware: Bật</sys:String>
+    <sys:String x:Key="WS_Pill_BloatwareOff">Bloatware: Tắt</sys:String>
+    <sys:String x:Key="WS_Drivers_StorageWarning">Thiếu driver ổ cứng quan trọng:</sys:String>
+    <sys:String x:Key="WS_Unattend_Generated">(do app tạo)</sys:String>
+    <sys:String x:Key="WS_Unattend_Clear">Xoá</sys:String>
+
+    <sys:String x:Key="WS_Download_Title">Tải bộ cài Windows</sys:String>
+    <sys:String x:Key="WS_Download_ActionRun">Tải &amp; mở</sys:String>
+    <sys:String x:Key="WS_Download_ActionOpen">Mở trang</sys:String>
+
+    <sys:String x:Key="WS_Integrity_Title">Kiểm tra nguồn</sys:String>
+    <sys:String x:Key="WS_Integrity_File">Tệp</sys:String>
+    <sys:String x:Key="WS_Integrity_Size">Dung lượng</sys:String>
+    <sys:String x:Key="WS_Integrity_Sha256">SHA-256</sys:String>
+    <sys:String x:Key="WS_Integrity_Sidecar">SHA-256 tham chiếu</sys:String>
+    <sys:String x:Key="WS_Integrity_Signature">Chữ ký số</sys:String>
+    <sys:String x:Key="WS_Integrity_Match">Khớp</sys:String>
+    <sys:String x:Key="WS_Integrity_Mismatch">Không khớp</sys:String>
+    <sys:String x:Key="WS_Integrity_None">Không có</sys:String>
+
+    <sys:String x:Key="WS_Bloatware_Title">Gỡ ứng dụng sẵn (Bloatware)</sys:String>
+    <sys:String x:Key="WS_Bloatware_Enable">Gỡ ứng dụng Store cài sẵn được chọn</sys:String>
+    <sys:String x:Key="WS_Bloatware_BlockPromoted">Chặn tự tải ứng dụng quảng cáo cho tài khoản mới</sys:String>
+    <sys:String x:Key="WS_Bloatware_Scan">Quét ảnh</sys:String>
+
+    <sys:String x:Key="WS_About_AppTitle">Felix WinDeploy</sys:String>
+    <sys:String x:Key="WS_About_Version">Phiên bản</sys:String>
+    <sys:String x:Key="WS_About_Environment">Môi trường</sys:String>
+    <sys:String x:Key="WS_About_Firmware">Firmware</sys:String>
+    <sys:String x:Key="WS_About_Language">Ngôn ngữ</sys:String>
+    <sys:String x:Key="WS_About_Theme">Giao diện</sys:String>
+
+    <sys:String x:Key="WS_Pill_RecordOn">Ghi hình: Bật</sys:String>
+    <sys:String x:Key="WS_Pill_RecordOff">Ghi hình: Tắt</sys:String>
+    <sys:String x:Key="WS_Record_Title">Ghi hình trong WinPE</sys:String>
+    <sys:String x:Key="WS_Record_None">Không ghi hình</sys:String>
+    <sys:String x:Key="WS_Record_Video">Quay video (MP4)</sys:String>
+    <sys:String x:Key="WS_Record_Screenshots">Chụp ảnh màn hình định kỳ (PNG)</sys:String>
+    <sys:String x:Key="WS_Record_Both">Quay video và chụp ảnh</sys:String>
+    <sys:String x:Key="WS_Record_Interval">Khoảng chụp ảnh</sys:String>
+    <sys:String x:Key="WS_Record_Minutes">Phút</sys:String>
+    <sys:String x:Key="WS_Record_Seconds">Giây</sys:String>
+
+    <sys:String x:Key="WS_RescueUsb">USB cứu hộ</sys:String>
+    <sys:String x:Key="WS_RescueUsb_None">Không tạo</sys:String>
+    <sys:String x:Key="WS_RescueUsb_MakeBtn">Tạo USB cứu boot</sys:String>
+    <sys:String x:Key="WS_RescueUsb_Title">Tạo USB cứu boot Felix</sys:String>
+    <sys:String x:Key="WS_RescueUsb_Mode">Chế độ chuẩn bị</sys:String>
+    <sys:String x:Key="WS_RescueUsb_KeepData">Chép thêm file cứu hộ vào phân vùng FAT32 (giữ nguyên dữ liệu)</sys:String>
+    <sys:String x:Key="WS_RescueUsb_EraseWarn">Cảnh báo: toàn bộ dữ liệu trên ổ USB đã chọn sẽ bị xoá.</sys:String>
+    <sys:String x:Key="WS_RescueUsb_TypeConfirm">Nhập mã xác nhận</sys:String>
+    <sys:String x:Key="WS_RescueUsb_Create">Tạo USB</sys:String>
+
+    <sys:String x:Key="WS_Resume_SafeStop">Dừng an toàn</sys:String>
+    <sys:String x:Key="WS_Resume_Continue">Tiếp tục</sys:String>
+    <sys:String x:Key="WS_Resume_Retry">Thử lại bước</sys:String>
+    <sys:String x:Key="WS_Resume_CancelToOldWin">Huỷ &amp; quay về Windows cũ</sys:String>
+    <sys:String x:Key="WS_Resume_OpenCmd">Mở CMD</sys:String>
+    <sys:String x:Key="WS_Resume_Restart">Khởi động lại</sys:String>
+    <sys:String x:Key="WS_Resume_Shutdown">Tắt máy</sys:String>
+    <sys:String x:Key="WS_Resume_Log">Nhật ký cài đặt</sys:String>
+
+    <sys:String x:Key="WS_Nav_Backup">Sao lưu Windows</sys:String>
+    <sys:String x:Key="WS_StartBackup">Bắt đầu sao lưu</sys:String>
+    <sys:String x:Key="WS_Download_OpenFelix">Tải bộ cài tại Felix Platforms</sys:String>
+    <sys:String x:Key="WS_Hw_BoardFirmware">Bo mạch &amp; Firmware</sys:String>
+    <sys:String x:Key="WS_Hw_RecommendedTitle">Phiên bản Windows khuyên dùng</sys:String>
+    <sys:String x:Key="WS_Hw_EditionsTitle">Các phiên bản tương thích</sys:String>
+    <sys:String x:Key="WS_Hw_ChecksTitle">Đánh giá phần cứng</sys:String>
+    <sys:String x:Key="WS_Hw_Loading">Đang quét cấu hình phần cứng...</sys:String>
+
+    <sys:String x:Key="WS_Backup_SourceCard">Nguồn &amp; tệp lưu trữ</sys:String>
+    <sys:String x:Key="WS_Backup_SourceWin">Windows cần sao lưu</sys:String>
+    <sys:String x:Key="WS_Backup_Format">Định dạng ảnh</sys:String>
+    <sys:String x:Key="WS_Backup_SwmSplit">Chia SWM (MiB)</sys:String>
+    <sys:String x:Key="WS_Backup_Output">Tệp lưu ảnh</sys:String>
+    <sys:String x:Key="WS_Backup_ImageName">Tên bản sao lưu</sys:String>
+    <sys:String x:Key="WS_Backup_Description">Mô tả</sys:String>
+
+    <sys:String x:Key="WS_Backup_MethodCard">Chế độ chụp ảnh</sys:String>
+    <sys:String x:Key="WS_Backup_MethodLive">Chụp trực tiếp trên Windows (VSS) hoặc phân vùng offline</sys:String>
+    <sys:String x:Key="WS_Backup_MethodWinPe">Khởi động vào WinPE 1 lần để chụp ảnh sạch</sys:String>
+    <sys:String x:Key="WS_Backup_MethodSysprep">Chuẩn hoá Sysprep (/generalize /oobe) rồi chụp trong WinPE</sys:String>
+    <sys:String x:Key="WS_Backup_Portable">Tương thích phần cứng khác (xoá MountedDevices, storage Start=0)</sys:String>
+    <sys:String x:Key="WS_Backup_ShutdownAfter">Tắt máy sau khi sao lưu xong</sys:String>
+
+    <sys:String x:Key="WS_Backup_SysprepCard">Sysprep &amp; khôi phục an toàn</sys:String>
+    <sys:String x:Key="WS_Backup_SysprepGeneralize">Chuẩn hoá phần cứng (/generalize)</sys:String>
+    <sys:String x:Key="WS_Backup_SysprepAudit">Khởi động vào chế độ Audit (/audit)</sys:String>
+    <sys:String x:Key="WS_Backup_SysprepStripDrivers">Gỡ driver bên thứ 3 trước khi Sysprep</sys:String>
+    <sys:String x:Key="WS_Backup_SysprepStripStorage">Gỡ cả driver điều khiển ổ đĩa bên thứ 3</sys:String>
+    <sys:String x:Key="WS_Backup_SysprepRestoreSuccess">Tự khôi phục ảnh an toàn sau khi chụp xong để giữ nguyên Windows gốc</sys:String>
+    <sys:String x:Key="WS_Backup_SysprepRestoreFail">Tự khôi phục ảnh an toàn sau 60 giây nếu Sysprep lỗi</sys:String>
+    <sys:String x:Key="WS_Backup_SysprepUnattend">Tệp Unattend.xml cho Sysprep</sys:String>
+
+    <sys:String x:Key="WS_ResumeBackup_Heading">Sao lưu Windows trong WinPE</sys:String>
+    <sys:String x:Key="WS_ResumeBackup_RestoreNow">Khôi phục ngay</sys:String>
+    <sys:String x:Key="WS_ResumeBackup_DoNotRestore">Không khôi phục</sys:String>
+
+    <sys:String x:Key="WS_Badge_On">Bật</sys:String>
+    <sys:String x:Key="WS_Badge_Off">Tắt</sys:String>
+    <sys:String x:Key="WS_Module_Drivers">Sao lưu driver</sys:String>
+    <sys:String x:Key="WS_Module_Remote">Hỗ trợ từ xa</sys:String>
+    <sys:String x:Key="WS_Module_Record">Ghi hình WinPE</sys:String>
+    <sys:String x:Key="WS_Module_Bloatware">Lọc Bloatware</sys:String>
+</ResourceDictionary>

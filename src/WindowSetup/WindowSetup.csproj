@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows10.0.19041.0</TargetFramework>
+    <TargetPlatformMinVersion>10.0.19041.0</TargetPlatformMinVersion>
+    <UseWPF>true</UseWPF>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>Felix.WindowSetup</RootNamespace>
+    <AssemblyName>WindowSetup</AssemblyName>
+    <Product>Felix WinDeploy</Product>
+    <AssemblyTitle>Felix WinDeploy</AssemblyTitle>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>Resources\window-setup.ico</ApplicationIcon>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <SelfContained>true</SelfContained>
+    <PublishSingleFile>false</PublishSingleFile>
+    <PublishTrimmed>false</PublishTrimmed>
+  </PropertyGroup>
+  <ItemGroup>
+    <Resource Include="Resources\window-setup.ico" />
+    <None Include="..\..\tools\wimlib\x64\wimlib-imagex.exe" Link="Tools\wimlib\x64\wimlib-imagex.exe" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="..\..\tools\wimlib\x64\libwim-15.dll" Link="Tools\wimlib\x64\libwim-15.dll" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="..\..\tools\felixpe\felixpe-boot.cmd" Link="Tools\felixpe\felixpe-boot.cmd" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="..\..\tools\felixpe\felixpe-rescue.cmd" Link="Tools\felixpe\felixpe-rescue.cmd" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\felix-desktop\Shared\UserDataPaths.cs" Link="Compatibility\UserDataPaths.cs" />
+    <Compile Include="..\..\..\felix-desktop\Shared\Infrastructure\Preferences\FilePreferenceStore.cs" Link="Infrastructure\Preferences\FilePreferenceStore.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WindowSetup.Core\WindowSetup.Core.csproj" />
+    <ProjectReference Include="..\WindowSetup.Storage\WindowSetup.Storage.csproj" />
+    <ProjectReference Include="..\..\..\felix-desktop\Felix.UI\Felix.UI.csproj" />
+  </ItemGroup>
+</Project>

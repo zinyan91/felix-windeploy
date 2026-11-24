@@ -1,0 +1,64 @@
+<Window x:Class="Felix.WindowSetup.Views.RecordingDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:helpers="clr-namespace:Felix.WindowSetup.Helpers"
+        Title="{DynamicResource WS_Record_Title}"
+        Width="480"
+        Height="340"
+        MinWidth="420"
+        MinHeight="300"
+        Background="{DynamicResource BgApp}"
+        Foreground="{DynamicResource OnSurface}"
+        FontFamily="Segoe UI Variable, Segoe UI"
+        FontSize="13.5"
+        UseLayoutRounding="True"
+        SnapsToDevicePixels="True"
+        WindowStartupLocation="CenterOwner"
+        ResizeMode="NoResize"
+        ShowInTaskbar="False">
+    <Window.Resources>
+        <helpers:StringNotEmptyToVisibilityConverter x:Key="StrVis"/>
+    </Window.Resources>
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Border Grid.Row="0" Style="{StaticResource Redesign.Card}" Padding="16">
+            <StackPanel>
+                <RadioButton x:Name="ModeNoneRadio" Content="{DynamicResource WS_Record_None}" Margin="0,0,0,8" Checked="Mode_Changed"/>
+                <RadioButton x:Name="ModeVideoRadio" Content="{DynamicResource WS_Record_Video}" Margin="0,0,0,8" Checked="Mode_Changed"/>
+                <RadioButton x:Name="ModeScreenshotsRadio" Content="{DynamicResource WS_Record_Screenshots}" Margin="0,0,0,8" Checked="Mode_Changed"/>
+                <RadioButton x:Name="ModeBothRadio" Content="{DynamicResource WS_Record_Both}" Checked="Mode_Changed"/>
+            </StackPanel>
+        </Border>
+
+        <Border x:Name="IntervalPanel" Grid.Row="1" Style="{StaticResource Redesign.Card}" Padding="16" Margin="0,12,0,0">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="70"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="70"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Column="0" Text="{DynamicResource WS_Record_Interval}" VerticalAlignment="Center" FontWeight="SemiBold"/>
+                <TextBlock Grid.Column="1" Text="{DynamicResource WS_Record_Minutes}" Foreground="{DynamicResource OnSurfaceMuted}" VerticalAlignment="Center" Margin="0,0,6,0"/>
+                <TextBox x:Name="MinutesBox" Grid.Column="2" Height="32" Margin="0,0,12,0" TextChanged="Interval_TextChanged"/>
+                <TextBlock Grid.Column="3" Text="{DynamicResource WS_Record_Seconds}" Foreground="{DynamicResource OnSurfaceMuted}" VerticalAlignment="Center" Margin="0,0,6,0"/>
+                <TextBox x:Name="SecondsBox" Grid.Column="4" Height="32" TextChanged="Interval_TextChanged"/>
+            </Grid>
+        </Border>
+
+        <TextBlock x:Name="IntervalErrorText" Grid.Row="2" Foreground="{DynamicResource Danger}" TextWrapping="Wrap" Margin="0,10,0,0"
+                   Visibility="{Binding Text, RelativeSource={RelativeSource Self}, Converter={StaticResource StrVis}}"/>
+
+        <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,14,0,0">
+            <Button Content="{DynamicResource WS_Cancel}" Style="{StaticResource Redesign.Button}" MinHeight="34" Padding="14,6" Margin="0,0,8,0" Click="Cancel_Click"/>
+            <Button x:Name="ApplyRecordButton" Content="{DynamicResource WS_Drivers_Apply}" Style="{StaticResource Redesign.PrimaryButton}" MinHeight="34" Padding="16,6" Click="Apply_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

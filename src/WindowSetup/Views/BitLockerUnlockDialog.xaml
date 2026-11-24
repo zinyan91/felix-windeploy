@@ -1,0 +1,53 @@
+<Window x:Class="Felix.WindowSetup.Views.BitLockerUnlockDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:helpers="clr-namespace:Felix.WindowSetup.Helpers"
+        Title="{DynamicResource WS_BitLocker_Title}"
+        Width="480"
+        Height="260"
+        MinWidth="420"
+        MinHeight="230"
+        Background="{DynamicResource BgApp}"
+        Foreground="{DynamicResource OnSurface}"
+        FontFamily="Segoe UI Variable, Segoe UI"
+        FontSize="13.5"
+        UseLayoutRounding="True"
+        SnapsToDevicePixels="True"
+        WindowStartupLocation="CenterOwner"
+        ResizeMode="NoResize"
+        ShowInTaskbar="False">
+    <Window.Resources>
+        <helpers:StringNotEmptyToVisibilityConverter x:Key="StrVis"/>
+    </Window.Resources>
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock x:Name="VolumeHeader" Grid.Row="0" FontSize="15" FontWeight="SemiBold" Margin="0,0,0,12"/>
+
+        <StackPanel Grid.Row="1">
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                <RadioButton x:Name="PasswordModeRadio" Content="{DynamicResource WS_BitLocker_ModePassword}"
+                             IsChecked="True" Margin="0,0,16,0"/>
+                <RadioButton x:Name="RecoveryKeyModeRadio" Content="{DynamicResource WS_BitLocker_ModeRecoveryKey}"/>
+            </StackPanel>
+            <TextBox x:Name="SecretBox" Height="36"/>
+        </StackPanel>
+
+        <TextBlock x:Name="ErrorText" Grid.Row="2" Foreground="{DynamicResource Danger}" TextWrapping="Wrap"
+                   Margin="0,10,0,0"
+                   Visibility="{Binding Text, RelativeSource={RelativeSource Self}, Converter={StaticResource StrVis}}"/>
+
+        <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,14,0,0">
+            <Button Content="{DynamicResource WS_Cancel}" Style="{StaticResource Redesign.Button}"
+                    MinHeight="34" Padding="14,6" Margin="0,0,8,0" Click="Cancel_Click"/>
+            <Button x:Name="UnlockButton" Content="{DynamicResource WS_BitLocker_UnlockBtn}"
+                    Style="{StaticResource Redesign.PrimaryButton}" MinHeight="34" Padding="16,6"
+                    Click="Unlock_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
